@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permisos -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:label="DistribuidoraApp"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DistribuidoraApp">
+
+        <!-- Activities sin intent-filter (no necesitan exported) -->
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".CompraActivity" />
+        <activity android:name=".MonitoreoActivity" />
+        <activity android:name=".MainActivity" />
+
+        <!-- Pantalla inicial: debe tener exported="true" por el intent-filter -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>
